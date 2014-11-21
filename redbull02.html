@@ -1,0 +1,249 @@
+<html>
+<head>
+<script type='text/javascript' src='http://lrn.icstars.org/redball.js'></script>
+<script>
+function moveup(){
+	if (redball.top > 0){
+		redball.top=redball.top -5;
+	}
+}
+
+function movedown(){
+	if (redball.top < 610){
+		redball.top=redball.top +5;
+	}
+}
+function moveleft(){
+	if (redball.left > 0){
+		redball.left=redball.left -5;
+	}
+}
+
+function moveright(){
+	if (redball.left < 1335){
+		redball.left=redball.left +5;
+	}
+}
+
+function movesquare(){
+	for(var i=1; i<=8; i++){
+		moveright();
+	}
+	for(var i=1; i<=8; i++){
+		movedown();
+	}
+	for(var i=1; i<=8; i++){
+		moveleft();
+	}
+	for(var i=1; i<=8; i++){
+		moveup();
+	}	
+}
+
+function upright(){
+	moveup();
+	moveright();
+}
+
+function upleft(){
+	moveup();
+	moveleft();
+}
+
+function downright(){
+	movedown();
+	moveright();
+}
+
+function downleft(){
+	movedown();
+	moveleft();
+}
+
+function center(){
+	redball.top=redball.top=+310;
+	redball.left=redball.left=+500;
+}
+
+function triangle(){
+	for (var i=1; i<=9; i++){
+		downright();
+	}
+	for (var i=1; i<=18; i++){
+		moveleft();
+	}
+	for (var i=1; i<=9; i++){
+		upright();
+		}
+}
+
+function octagon(){  
+	for (var i=1; i<=9; i++){
+		moveright();
+	}
+	for (var i=1; i<=9; i++){
+		downright();
+	}
+	for (var i=1; i<=9; i++){	
+		movedown();
+	}
+	for (var i=1; i<=9; i++){	
+		downleft();
+	}
+	for (var i=1; i<=9; i++){	
+		moveleft();
+	}
+	for (var i=1; i<=9; i++){	
+		upleft();
+	}
+	for (var i=1; i<=9; i++){	
+		moveup();
+	}
+	for (var i=1; i<=9; i++){	
+		upright();
+	}
+}
+
+function moveup10(){
+	for (var i = 1; i<=10; i ++){
+		moveup();
+	}
+}
+
+function bounce(){
+	for (var i=1; i<=15; i++){
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+	}
+	for(var i=1; i<=10; i ++){
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+	}
+	for (var i=1; i<=5; i ++){
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		moveup();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+		movedown();
+	}
+}
+
+function movex(){
+	for (var i=1; i<=8; i++){
+		downright();
+		}
+	for (var i=1; i<=4; i++){
+		upleft();
+		}
+	for (var i=1; i<=4; i++){
+		downleft();
+		}
+	for (var i=1; i<=8; i++){
+		upright();
+		}
+	for (var i=1; i<=4; i++){
+		downleft();
+		}
+	for (var i=1; i<=4; i++){
+		upleft();
+	}
+}
+</script>
+
+
+</head>
+<body>
+
+<img id="redball" src="redball.jpg" alt="red ball" height="30" width="30">
+<table position="absolute"; top="300"; left="700";>
+<tr>
+<td><button onclick="upleft()"> <img src="C:\Users\Jeremy Washington\Desktop\Night Class\upleft.jpg" height="50" width="50"></button></td>
+<td><button onclick="moveup()"> <img src="C:\Users\Jeremy Washington\Desktop\Night Class\up.jpg" height="50" width="50"></button></td>
+<td><button onclick="upright()"> <img src="C:\Users\Jeremy Washington\Desktop\Night Class\upright.jpg" height="50" width="50"></button></td>
+</tr>
+
+<tr>
+<td><button onclick="moveleft()"> <img src="C:\Users\Jeremy Washington\Desktop\Night Class\left.jpg" height="50" width="50"></button></td>
+<td><button onclick="center()"> <img src="center.png" height="50" width="50"></button></td>
+<td><button onclick="moveright()"> <img src="C:\Users\Jeremy Washington\Desktop\Night Class\right.jpg" height="50" width="50"></button></td>
+</tr>
+
+<tr>
+<td><button onclick="downleft()"> <img src="C:\Users\Jeremy Washington\Desktop\Night Class\downleft.jpg" height="50" width="50"> </button></td>
+<td><button onclick="movedown()"> <img src="C:\Users\Jeremy Washington\Desktop\Night Class\down.jpg" height="50" width="50"></button></td>
+<td><button onclick="downright()"> <img src="C:\Users\Jeremy Washington\Desktop\Night Class\downright.jpg" height="50" width="50"></button></td>
+</tr>
+</table>
+
+<button onclick="bounce()"> Bounce </button>
+<button onclick="moveup10()"> Move Up 10 </button>
+<button onclick="movesquare()"> Move Square </button>
+<button onclick="triangle()"> Triangle </button>
+<button onclick="octagon()"> Octagon </button>
+<button onclick="movex()"> Move in X Shape </button>
+
+</body>
+</html>
